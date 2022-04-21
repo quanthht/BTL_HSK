@@ -16,7 +16,8 @@ namespace Thuchanh
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormDangnhap());
+            //Application.Run(new FormDangnhap());
+            Application.Run(new FormQLNhanVien());
         }
     }
 }

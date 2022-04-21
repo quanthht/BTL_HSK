@@ -46,7 +46,12 @@ namespace Thuchanh
             FormDangky form = new FormDangky();
             form.ShowDialog();
         }
+
+        private void FormDangnhap_Load(object sender, EventArgs e)
+        {
+
+        }
         //LMC đã ở đây
-        //alo123
+        //ảo thật tôi đã xem đc design r
     }
 }
