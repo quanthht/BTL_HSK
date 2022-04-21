@@ -46,5 +46,6 @@ namespace Thuchanh
             FormDangky form = new FormDangky();
             form.ShowDialog();
         }
+        //LMC đã ở đây
     }
 }
