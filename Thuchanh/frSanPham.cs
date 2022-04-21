@@ -16,5 +16,10 @@ namespace Thuchanh
         {
             InitializeComponent();
         }
+
+        private void frSanPham_Load(object sender, EventArgs e)
+        {
+            //mai tôi cop sang đây
+        }
     }
 }

@@ -279,6 +279,7 @@ namespace Thuchanh
             this.Controls.Add(this.btnHome);
             this.Name = "frSanPham";
             this.Text = "Sản Phẩm";
+            this.Load += new System.EventHandler(this.frSanPham_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dsSP)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
