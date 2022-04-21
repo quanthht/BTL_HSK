@@ -47,5 +47,6 @@ namespace Thuchanh
             form.ShowDialog();
         }
         //LMC đã ở đây
+        //alo123
     }
 }
