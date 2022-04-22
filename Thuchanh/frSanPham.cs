@@ -259,6 +259,7 @@ namespace Thuchanh
             FormHome formHome = new FormHome();
             this.Hide();
             formHome.Show();
+            //alo123
         }
     }
 }
