@@ -34,10 +34,6 @@ namespace Thuchanh
         private void bài5ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide(); 
-            Form2 form2 = new Form2();
-            form2.Name = "Bài 5";
-            
-            form2.Show();
         }
 
         private void quảnLýKháchHàngToolStripMenuItem_Click(object sender, EventArgs e)

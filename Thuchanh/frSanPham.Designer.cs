@@ -108,6 +108,8 @@ namespace Thuchanh
             this.tbSearch.Name = "tbSearch";
             this.tbSearch.Size = new System.Drawing.Size(283, 20);
             this.tbSearch.TabIndex = 72;
+            this.tbSearch.TextChanged += new System.EventHandler(this.tbSearch_TextChanged);
+            this.tbSearch.Validating += new System.ComponentModel.CancelEventHandler(this.tbSearch_Validating);
             // 
             // btnXoa
             // 
@@ -230,6 +232,7 @@ namespace Thuchanh
             this.dgvSP.Name = "dgvSP";
             this.dgvSP.Size = new System.Drawing.Size(661, 311);
             this.dgvSP.TabIndex = 57;
+            this.dgvSP.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSP_CellClick);
             this.dgvSP.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dsSP_CellContentClick);
             // 
             // label1
@@ -260,6 +263,7 @@ namespace Thuchanh
             this.btnHome.TabIndex = 54;
             this.btnHome.Text = "Trang chủ";
             this.btnHome.UseVisualStyleBackColor = true;
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
             // errorProviderSP
             // 
@@ -293,6 +297,7 @@ namespace Thuchanh
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnReload);
             this.Controls.Add(this.btnHome);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frSanPham";
             this.Text = "frSanPham";
             this.Load += new System.EventHandler(this.frSanPham_Load);

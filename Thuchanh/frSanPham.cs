@@ -13,11 +13,11 @@ namespace Thuchanh
 {
     public partial class frSanPham : Form
     {
-        //static String constr = @"
-        //    Data Source=CUONG\CUONG;
-        //    Integrated Security=True;
-        //    Initial Catalog=KinhDoanhMayTinh";
-        static string constr = "Data Source=LAPTOP-B66GKD0P;Initial Catalog=KinhDoanhMayTinh;Integrated Security=True";
+        static String constr = @"
+            Data Source=CUONG\CUONG;
+            Integrated Security=True;
+            Initial Catalog=KinhDoanhMayTinh";
+        //static string constr = "Data Source=LAPTOP-B66GKD0P;Initial Catalog=KinhDoanhMayTinh;Integrated Security=True";
         public frSanPham()
         {
             InitializeComponent();
@@ -99,19 +99,7 @@ namespace Thuchanh
 
         private void dsSP_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0)
-            {
-                DataGridViewRow row = this.dgvSP.Rows[e.RowIndex];
-                tbMaSP.Text = row.Cells[0].Value.ToString();
-                tbTenSP.Text = row.Cells[1].Value.ToString();
-                tbHangSX.Text = row.Cells[2].Value.ToString();
-                tbNamSX.Text = row.Cells[3].Value.ToString();
-                tbDonGiaNhap.Text = row.Cells[4].Value.ToString();
-                tbDonGiaXuat.Text = row.Cells[5].Value.ToString();
-
-                btnSua.Enabled = true;
-                btnXoa.Enabled = true;
-            }
+            
         }
 
         private void tbMaSP_Validating(object sender, CancelEventArgs e)
@@ -223,6 +211,54 @@ namespace Thuchanh
                 }
 
             }
+        }
+
+        private void dgvSP_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = this.dgvSP.Rows[e.RowIndex];
+                tbMaSP.Text = row.Cells[0].Value.ToString();
+                tbTenSP.Text = row.Cells[1].Value.ToString();
+                tbHangSX.Text = row.Cells[2].Value.ToString();
+                tbNamSX.Text = row.Cells[3].Value.ToString();
+                tbDonGiaNhap.Text = row.Cells[4].Value.ToString();
+                tbDonGiaXuat.Text = row.Cells[5].Value.ToString();
+
+                btnSua.Enabled = true;
+                btnXoa.Enabled = true;
+            }
+        }
+
+        private void tbSearch_Validating(object sender, CancelEventArgs e)
+        {
+            
+        }
+
+        private void tbSearch_TextChanged(object sender, EventArgs e)
+        {
+            using (SqlConnection cnn = new SqlConnection(constr))
+            {
+                SqlCommand cmd = cnn.CreateCommand();
+                cmd.CommandText = "prSearchSP";
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@maTenHang", tbSearch.Text);
+                using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
+                {
+                    DataTable dt = new DataTable();
+                    adapter.Fill(dt);
+                    dgvSP.DataSource = dt;
+                    dgvSP.Refresh();
+                }
+
+            }
+        }
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            FormHome formHome = new FormHome();
+            this.Hide();
+            formHome.Show();
         }
     }
 }
