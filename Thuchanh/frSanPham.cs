@@ -35,7 +35,7 @@ namespace Thuchanh
                     {
                         DataTable dt = new DataTable();
                         adapter.Fill(dt);
-                        dsSP.DataSource = dt;
+                        dgvSP.DataSource = dt;
                     }
                 }
             }
@@ -100,7 +100,7 @@ namespace Thuchanh
         {
             if (e.RowIndex >= 0)
             {
-                DataGridViewRow row = this.dsSP.Rows[e.RowIndex];
+                DataGridViewRow row = this.dgvSP.Rows[e.RowIndex];
                 tbMaSP.Text = row.Cells[0].Value.ToString();
                 tbTenSP.Text = row.Cells[1].Value.ToString();
                 tbHangSX.Text = row.Cells[2].Value.ToString();
@@ -198,8 +198,8 @@ namespace Thuchanh
                 {
                     DataTable dt = new DataTable();
                     adapter.Fill(dt);
-                    dsSP.DataSource = dt;
-                    dsSP.Refresh();
+                    dgvSP.DataSource = dt;
+                    dgvSP.Refresh();
                 }
 
             }
@@ -217,8 +217,8 @@ namespace Thuchanh
                 {
                     DataTable dt = new DataTable();
                     adapter.Fill(dt);
-                    dsSP.DataSource = dt;
-                    dsSP.Refresh();
+                    dgvSP.DataSource = dt;
+                    dgvSP.Refresh();
                 }
 
             }

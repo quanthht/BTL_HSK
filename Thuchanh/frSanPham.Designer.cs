@@ -49,12 +49,12 @@ namespace Thuchanh
             this.sTenSP = new System.Windows.Forms.Label();
             this.tbMaSP = new System.Windows.Forms.TextBox();
             this.sMaSP = new System.Windows.Forms.Label();
-            this.dsSP = new System.Windows.Forms.DataGridView();
+            this.dgvSP = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.btnReload = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
             this.errorProviderSP = new System.Windows.Forms.ErrorProvider(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.dsSP)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSP)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderSP)).BeginInit();
             this.SuspendLayout();
             // 
@@ -222,15 +222,15 @@ namespace Thuchanh
             this.sMaSP.TabIndex = 58;
             this.sMaSP.Text = "Mã sản phẩm";
             // 
-            // dsSP
+            // dgvSP
             // 
-            this.dsSP.AllowUserToOrderColumns = true;
-            this.dsSP.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dsSP.Location = new System.Drawing.Point(12, 63);
-            this.dsSP.Name = "dsSP";
-            this.dsSP.Size = new System.Drawing.Size(661, 311);
-            this.dsSP.TabIndex = 57;
-            this.dsSP.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dsSP_CellContentClick);
+            this.dgvSP.AllowUserToOrderColumns = true;
+            this.dgvSP.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvSP.Location = new System.Drawing.Point(12, 63);
+            this.dgvSP.Name = "dgvSP";
+            this.dgvSP.Size = new System.Drawing.Size(661, 311);
+            this.dgvSP.TabIndex = 57;
+            this.dgvSP.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dsSP_CellContentClick);
             // 
             // label1
             // 
@@ -289,14 +289,14 @@ namespace Thuchanh
             this.Controls.Add(this.sTenSP);
             this.Controls.Add(this.tbMaSP);
             this.Controls.Add(this.sMaSP);
-            this.Controls.Add(this.dsSP);
+            this.Controls.Add(this.dgvSP);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnReload);
             this.Controls.Add(this.btnHome);
             this.Name = "frSanPham";
             this.Text = "frSanPham";
             this.Load += new System.EventHandler(this.frSanPham_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dsSP)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSP)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderSP)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -324,7 +324,7 @@ namespace Thuchanh
         private System.Windows.Forms.Label sTenSP;
         private System.Windows.Forms.TextBox tbMaSP;
         private System.Windows.Forms.Label sMaSP;
-        private System.Windows.Forms.DataGridView dsSP;
+        private System.Windows.Forms.DataGridView dgvSP;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnReload;
         private System.Windows.Forms.Button btnHome;
