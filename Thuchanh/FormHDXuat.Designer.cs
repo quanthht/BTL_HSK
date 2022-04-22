@@ -49,7 +49,6 @@ namespace Thuchanh
             this.cbbMaHD = new System.Windows.Forms.ComboBox();
             this.btnBaoCao = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
-            this.btnSua = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -219,7 +218,7 @@ namespace Thuchanh
             // 
             // btnBaoCao
             // 
-            this.btnBaoCao.Location = new System.Drawing.Point(1471, 772);
+            this.btnBaoCao.Location = new System.Drawing.Point(1443, 732);
             this.btnBaoCao.Name = "btnBaoCao";
             this.btnBaoCao.Size = new System.Drawing.Size(75, 23);
             this.btnBaoCao.TabIndex = 53;
@@ -228,30 +227,23 @@ namespace Thuchanh
             // 
             // btnXoa
             // 
-            this.btnXoa.Location = new System.Drawing.Point(1471, 690);
+            this.btnXoa.Location = new System.Drawing.Point(1443, 656);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(75, 23);
             this.btnXoa.TabIndex = 52;
             this.btnXoa.Text = "xoá";
             this.btnXoa.UseVisualStyleBackColor = true;
-            // 
-            // btnSua
-            // 
-            this.btnSua.Location = new System.Drawing.Point(1471, 589);
-            this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(75, 23);
-            this.btnSua.TabIndex = 51;
-            this.btnSua.Text = "Sửa";
-            this.btnSua.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnThem
             // 
-            this.btnThem.Location = new System.Drawing.Point(1471, 494);
+            this.btnThem.Location = new System.Drawing.Point(1443, 595);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(75, 23);
             this.btnThem.TabIndex = 50;
             this.btnThem.Text = "Thêm ";
             this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // label6
             // 
@@ -371,7 +363,6 @@ namespace Thuchanh
             this.Controls.Add(this.cbbMaHD);
             this.Controls.Add(this.btnBaoCao);
             this.Controls.Add(this.btnXoa);
-            this.Controls.Add(this.btnSua);
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -415,7 +406,6 @@ namespace Thuchanh
         private System.Windows.Forms.ComboBox cbbMaHD;
         private System.Windows.Forms.Button btnBaoCao;
         private System.Windows.Forms.Button btnXoa;
-        private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;

@@ -109,7 +109,7 @@ namespace Thuchanh
             adapter.Fill(dt);
             cbbMaSP.DataSource = dt;
             cbbMaSP.DisplayMember = "sTenSP";
-            cbbMaSP.ValueMember = "sTenSP";
+            cbbMaSP.ValueMember = "sMaSP";
         }
         private void LoadMaNV()
         {
@@ -234,6 +234,74 @@ namespace Thuchanh
             }
             else
                 MessageBox.Show("Xoá không thành công");
+        }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            SqlConnection conn = new SqlConnection(constr);
+            conn.Open();
+            SqlCommand cmd1 = conn.CreateCommand();
+            cmd1.CommandType = CommandType.Text;
+            cmd1.CommandText = "select * from tblSanPham where sMaSP = '" + cbbMaSP.SelectedValue + "'";
+            SqlDataReader reader = cmd1.ExecuteReader();
+            reader.Read();
+            float dongianhap, dongiaxuat;
+            dongianhap = float.Parse(reader["fDonGiaNhap"].ToString());
+            dongiaxuat = float.Parse(reader["fDonGiaXuat"].ToString());
+            if (dongianhap < float.Parse(txtDG.Text) && float.Parse(txtDG.Text) < dongiaxuat)
+            {
+                SqlCommand cmd = conn.CreateCommand();
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                cmd.CommandText = "prInsertCTX";
+                cmd.Parameters.AddWithValue("@mahdx", cbbMaHD.Text);
+                cmd.Parameters.AddWithValue("@masp", cbbMaSP.SelectedValue);
+                cmd.Parameters.AddWithValue("@soluong", txtSoLuong.Text);
+                cmd.Parameters.AddWithValue("@dongiaxuat", txtDG.Text);
+                reader.Close();
+                try
+                {
+                    if (cmd.ExecuteNonQuery() > 0)
+                    {
+                        MessageBox.Show("Thêm Thành Công");
+                        LoadCTXuat();
+                        LoadHDX();
+                    }
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show("Thêm không thành công vì : "+ex.Message);
+                };              
+            }
+            else
+                MessageBox.Show("Đơn giá xuất phải lớn hơn đơn giá nhập");
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            SqlConnection conn = new SqlConnection(constr);
+            conn.Open();
+            MessageBox.Show(cbbMaHD.Text + "    " + cbbMaSP.SelectedValue, "Thông báo");
+            SqlCommand cmd = conn.CreateCommand();
+            cmd.CommandType = System.Data.CommandType.StoredProcedure;
+            cmd.CommandText = "prXoaCTHDX";
+            cmd.Parameters.AddWithValue("@mahdx", cbbMaHD.Text);
+            cmd.Parameters.AddWithValue("@masp", cbbMaSP.SelectedValue);
+            cmd.Parameters.AddWithValue("@soluong", int.Parse(txtSoLuong.Text.ToString()));
+            cmd.Parameters.AddWithValue("@dongiaxuat", float.Parse(txtDG.Text.ToString()));
+            if (cmd.ExecuteNonQuery() > 0)
+            {
+                if (MessageBox.Show("Bạn có muốn xoá không", "thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+
+                    LoadHDX();
+                    LoadCTXuat();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Xoá không thành công");
+            }
+            
         }
     }
 }
