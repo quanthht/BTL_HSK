@@ -116,6 +116,12 @@
       <DependentUpon>rptNhanvien.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="rptSanPham.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptSanPham.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="TenTK.cs" />
     <EmbeddedResource Include="FormBaocao.resx">
       <DependentUpon>FormBaocao.cs</DependentUpon>
@@ -157,6 +163,10 @@
     <EmbeddedResource Include="rptNhanvien.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rptNhanvien.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptSanPham.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptSanPham.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
