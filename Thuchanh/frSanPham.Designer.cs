@@ -45,7 +45,6 @@ namespace Thuchanh
             this.ClientSize = new System.Drawing.Size(1252, 405);
             this.Name = "frSanPham";
             this.Text = "Sản Phẩm";
-            this.Load += new System.EventHandler(this.frSanPham_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderSP)).EndInit();
             this.ResumeLayout(false);
 
