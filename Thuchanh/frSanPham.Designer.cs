@@ -1,4 +1,4 @@
-﻿
+﻿/*
 namespace Thuchanh
 {
     partial class frSanPham
@@ -54,4 +54,4 @@ namespace Thuchanh
         #endregion
         private System.Windows.Forms.ErrorProvider errorProviderSP;
     }
-}
+}*/
