@@ -16,7 +16,8 @@ namespace Thuchanh
     {
         SqlConnection con;
         SqlCommand command;
-        string str = "Data Source=DESKTOP-7I86OTK\\SQLEXPRESS;Initial Catalog=BTL;Integrated Security=True";
+        //string str = "Data Source=DESKTOP-7I86OTK\\SQLEXPRESS;Initial Catalog=BTL;Integrated Security=True";
+        static string constr = "Data Source=LAPTOP-B66GKD0P;Initial Catalog=KinhDoanhMayTinh;Integrated Security=True";
 
         public HDN()
         {

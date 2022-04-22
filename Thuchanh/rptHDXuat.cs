@@ -16,14 +16,14 @@ namespace Thuchanh {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class CrystalReport1 : ReportClass {
+    public class rptHDXuat : ReportClass {
         
-        public CrystalReport1() {
+        public rptHDXuat() {
         }
         
         public override string ResourceName {
             get {
-                return "CrystalReport1.rpt";
+                return "rptHDXuat.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace Thuchanh {
         
         public override string FullResourceName {
             get {
-                return "Thuchanh.CrystalReport1.rpt";
+                return "Thuchanh.rptHDXuat.rpt";
             }
             set {
                 // Do nothing
@@ -66,7 +66,7 @@ namespace Thuchanh {
         
         [Browsable(false)]
         [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.CrystalReports.Engine.Section GroupHeaderSection1 {
+        public CrystalDecisions.CrystalReports.Engine.Section Section3 {
             get {
                 return this.ReportDefinition.Sections[2];
             }
@@ -74,7 +74,7 @@ namespace Thuchanh {
         
         [Browsable(false)]
         [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.CrystalReports.Engine.Section Section3 {
+        public CrystalDecisions.CrystalReports.Engine.Section Section4 {
             get {
                 return this.ReportDefinition.Sections[3];
             }
@@ -82,41 +82,17 @@ namespace Thuchanh {
         
         [Browsable(false)]
         [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.CrystalReports.Engine.Section GroupFooterSection1 {
-            get {
-                return this.ReportDefinition.Sections[4];
-            }
-        }
-        
-        [Browsable(false)]
-        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.CrystalReports.Engine.Section Section4 {
-            get {
-                return this.ReportDefinition.Sections[5];
-            }
-        }
-        
-        [Browsable(false)]
-        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
         public CrystalDecisions.CrystalReports.Engine.Section Section5 {
             get {
-                return this.ReportDefinition.Sections[6];
-            }
-        }
-        
-        [Browsable(false)]
-        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.Shared.IParameterField Parameter_nguoi_lap {
-            get {
-                return this.DataDefinition.ParameterFields[0];
+                return this.ReportDefinition.Sections[4];
             }
         }
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedCrystalReport1 : Component, ICachedReport {
+    public class CachedrptHDXuat : Component, ICachedReport {
         
-        public CachedCrystalReport1() {
+        public CachedrptHDXuat() {
         }
         
         [Browsable(false)]
@@ -153,7 +129,7 @@ namespace Thuchanh {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            CrystalReport1 rpt = new CrystalReport1();
+            rptHDXuat rpt = new rptHDXuat();
             rpt.Site = this.Site;
             return rpt;
         }

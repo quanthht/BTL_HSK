@@ -29,8 +29,7 @@ namespace Thuchanh
             LoadMaNV();
             LoadHTTT();
         }
-
-        private void dgvHDXuat_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvHDXuat_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             txtMaHD.Text = dgvHDXuat.CurrentRow.Cells["sMaHDX"].Value.ToString();
             cbbMaNV.Text = dgvHDXuat.CurrentRow.Cells["sMaNV"].Value.ToString();
@@ -41,13 +40,14 @@ namespace Thuchanh
             cbbThanhToan.Text = dgvHDXuat.CurrentRow.Cells["sHinhthucTT"].Value.ToString();
         }
 
-        private void dgvCTXuat_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvCTXuat_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             cbbMaHD.Text = dgvCTXuat.CurrentRow.Cells["sMaHDX"].Value.ToString();
             cbbMaSP.Text = dgvCTXuat.CurrentRow.Cells["sTenSP"].Value.ToString();
             txtSoLuong.Text = dgvCTXuat.CurrentRow.Cells["iSoLuong"].Value.ToString();
             txtDG.Text = dgvCTXuat.CurrentRow.Cells["fDongiaxuat"].Value.ToString();
         }
+    
         public void LoadHDX()
         {
             using (SqlConnection conn = new SqlConnection(constr))
@@ -303,5 +303,25 @@ namespace Thuchanh
             }
             
         }
+
+        private void btnTrangchu_Click(object sender, EventArgs e)
+        {
+            FormHome home = new FormHome();
+            this.Hide();
+            home.Show();
+        }
+
+        private void btnLoad_Click(object sender, EventArgs e)
+        {
+            FormHDXuat_Load(sender, e);
+                txtDiaChi.Text="";
+                txtEmail.Text = "";
+                txtTenKH.Text = "";
+                txtSDT.Text = "";
+                cbbMaNV.Text = "";
+                txtMaHD.Text = "";
+                txtDG.Text = "";
+                txtSoLuong.Text = "";
+    }
     }
 }

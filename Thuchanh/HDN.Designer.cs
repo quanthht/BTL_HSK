@@ -197,6 +197,8 @@ namespace Thuchanh
             // 
             // dgv
             // 
+            this.dgv.AllowUserToAddRows = false;
+            this.dgv.AllowUserToDeleteRows = false;
             this.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -206,6 +208,7 @@ namespace Thuchanh
             this.Column5});
             this.dgv.Location = new System.Drawing.Point(10, 23);
             this.dgv.Name = "dgv";
+            this.dgv.ReadOnly = true;
             this.dgv.RowHeadersWidth = 51;
             this.dgv.RowTemplate.Height = 24;
             this.dgv.Size = new System.Drawing.Size(832, 220);
@@ -218,6 +221,7 @@ namespace Thuchanh
             this.Column1.HeaderText = "Mã hóa đơn";
             this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
             this.Column1.Width = 180;
             // 
             // Column2
@@ -226,6 +230,7 @@ namespace Thuchanh
             this.Column2.HeaderText = "Tên nhân viên";
             this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
             this.Column2.Width = 180;
             // 
             // Column3
@@ -234,6 +239,7 @@ namespace Thuchanh
             this.Column3.HeaderText = "Ngày lập";
             this.Column3.MinimumWidth = 6;
             this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
             this.Column3.Width = 150;
             // 
             // Column4
@@ -242,6 +248,7 @@ namespace Thuchanh
             this.Column4.HeaderText = "Tên NCC";
             this.Column4.MinimumWidth = 6;
             this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
             this.Column4.Width = 125;
             // 
             // Column5
@@ -250,6 +257,7 @@ namespace Thuchanh
             this.Column5.HeaderText = "Tổng tiền";
             this.Column5.MinimumWidth = 6;
             this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
             this.Column5.Width = 125;
             // 
             // HDN

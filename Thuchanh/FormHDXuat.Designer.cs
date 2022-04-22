@@ -60,6 +60,8 @@ namespace Thuchanh
             this.label1 = new System.Windows.Forms.Label();
             this.dgvCTXuat = new System.Windows.Forms.DataGridView();
             this.dgvHDXuat = new System.Windows.Forms.DataGridView();
+            this.btnLoad = new System.Windows.Forms.Button();
+            this.btnTrangchu = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCTXuat)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHDXuat)).BeginInit();
             this.SuspendLayout();
@@ -202,7 +204,7 @@ namespace Thuchanh
             // 
             this.cbbMaSP.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbMaSP.FormattingEnabled = true;
-            this.cbbMaSP.Location = new System.Drawing.Point(1117, 588);
+            this.cbbMaSP.Location = new System.Drawing.Point(979, 588);
             this.cbbMaSP.Name = "cbbMaSP";
             this.cbbMaSP.Size = new System.Drawing.Size(215, 24);
             this.cbbMaSP.TabIndex = 55;
@@ -211,14 +213,14 @@ namespace Thuchanh
             // 
             this.cbbMaHD.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbMaHD.FormattingEnabled = true;
-            this.cbbMaHD.Location = new System.Drawing.Point(1117, 529);
+            this.cbbMaHD.Location = new System.Drawing.Point(979, 529);
             this.cbbMaHD.Name = "cbbMaHD";
             this.cbbMaHD.Size = new System.Drawing.Size(215, 24);
             this.cbbMaHD.TabIndex = 54;
             // 
             // btnBaoCao
             // 
-            this.btnBaoCao.Location = new System.Drawing.Point(1443, 732);
+            this.btnBaoCao.Location = new System.Drawing.Point(1294, 681);
             this.btnBaoCao.Name = "btnBaoCao";
             this.btnBaoCao.Size = new System.Drawing.Size(75, 23);
             this.btnBaoCao.TabIndex = 53;
@@ -227,7 +229,7 @@ namespace Thuchanh
             // 
             // btnXoa
             // 
-            this.btnXoa.Location = new System.Drawing.Point(1443, 656);
+            this.btnXoa.Location = new System.Drawing.Point(1294, 605);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(75, 23);
             this.btnXoa.TabIndex = 52;
@@ -237,7 +239,7 @@ namespace Thuchanh
             // 
             // btnThem
             // 
-            this.btnThem.Location = new System.Drawing.Point(1443, 595);
+            this.btnThem.Location = new System.Drawing.Point(1294, 544);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(75, 23);
             this.btnThem.TabIndex = 50;
@@ -248,7 +250,7 @@ namespace Thuchanh
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(22, 485);
+            this.label6.Location = new System.Drawing.Point(334, 516);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(96, 17);
             this.label6.TabIndex = 49;
@@ -257,7 +259,7 @@ namespace Thuchanh
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(42, 23);
+            this.label5.Location = new System.Drawing.Point(597, 32);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(98, 17);
             this.label5.TabIndex = 48;
@@ -265,14 +267,14 @@ namespace Thuchanh
             // 
             // txtSoLuong
             // 
-            this.txtSoLuong.Location = new System.Drawing.Point(1117, 651);
+            this.txtSoLuong.Location = new System.Drawing.Point(979, 651);
             this.txtSoLuong.Name = "txtSoLuong";
             this.txtSoLuong.Size = new System.Drawing.Size(215, 22);
             this.txtSoLuong.TabIndex = 47;
             // 
             // txtDG
             // 
-            this.txtDG.Location = new System.Drawing.Point(1117, 714);
+            this.txtDG.Location = new System.Drawing.Point(979, 714);
             this.txtDG.Name = "txtDG";
             this.txtDG.Size = new System.Drawing.Size(215, 22);
             this.txtDG.TabIndex = 46;
@@ -280,7 +282,7 @@ namespace Thuchanh
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(984, 719);
+            this.label4.Location = new System.Drawing.Point(846, 719);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(101, 17);
             this.label4.TabIndex = 45;
@@ -289,7 +291,7 @@ namespace Thuchanh
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(983, 656);
+            this.label3.Location = new System.Drawing.Point(845, 656);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(73, 17);
             this.label3.TabIndex = 44;
@@ -298,7 +300,7 @@ namespace Thuchanh
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(984, 595);
+            this.label2.Location = new System.Drawing.Point(846, 595);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(106, 17);
             this.label2.TabIndex = 43;
@@ -307,7 +309,7 @@ namespace Thuchanh
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(984, 536);
+            this.label1.Location = new System.Drawing.Point(846, 536);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(91, 17);
             this.label1.TabIndex = 42;
@@ -316,13 +318,13 @@ namespace Thuchanh
             // dgvCTXuat
             // 
             this.dgvCTXuat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCTXuat.Location = new System.Drawing.Point(22, 536);
+            this.dgvCTXuat.Location = new System.Drawing.Point(-265, 516);
             this.dgvCTXuat.Name = "dgvCTXuat";
             this.dgvCTXuat.RowHeadersWidth = 51;
             this.dgvCTXuat.RowTemplate.Height = 24;
-            this.dgvCTXuat.Size = new System.Drawing.Size(805, 284);
+            this.dgvCTXuat.Size = new System.Drawing.Size(623, 284);
             this.dgvCTXuat.TabIndex = 41;
-            this.dgvCTXuat.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCTXuat_CellContentClick);
+            this.dgvCTXuat.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCTXuat_CellClick);
             // 
             // dgvHDXuat
             // 
@@ -336,13 +338,35 @@ namespace Thuchanh
             this.dgvHDXuat.RowTemplate.Height = 24;
             this.dgvHDXuat.Size = new System.Drawing.Size(1303, 391);
             this.dgvHDXuat.TabIndex = 40;
-            this.dgvHDXuat.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHDXuat_CellContentClick);
+            this.dgvHDXuat.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHDXuat_CellClick);
+            // 
+            // btnLoad
+            // 
+            this.btnLoad.Location = new System.Drawing.Point(136, 6);
+            this.btnLoad.Name = "btnLoad";
+            this.btnLoad.Size = new System.Drawing.Size(75, 23);
+            this.btnLoad.TabIndex = 73;
+            this.btnLoad.Text = "Tải lại";
+            this.btnLoad.UseVisualStyleBackColor = true;
+            this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
+            // 
+            // btnTrangchu
+            // 
+            this.btnTrangchu.Location = new System.Drawing.Point(12, 6);
+            this.btnTrangchu.Name = "btnTrangchu";
+            this.btnTrangchu.Size = new System.Drawing.Size(98, 23);
+            this.btnTrangchu.TabIndex = 74;
+            this.btnTrangchu.Text = "Trang chủ";
+            this.btnTrangchu.UseVisualStyleBackColor = true;
+            this.btnTrangchu.Click += new System.EventHandler(this.btnTrangchu_Click);
             // 
             // FormHDXuat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1728, 843);
+            this.Controls.Add(this.btnTrangchu);
+            this.Controls.Add(this.btnLoad);
             this.Controls.Add(this.btnXoaHD);
             this.Controls.Add(this.btnThemHD);
             this.Controls.Add(this.cbbThanhToan);
@@ -376,6 +400,7 @@ namespace Thuchanh
             this.Controls.Add(this.dgvHDXuat);
             this.Name = "FormHDXuat";
             this.Text = "FormHDXuat";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FormHDXuat_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCTXuat)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHDXuat)).EndInit();
@@ -417,5 +442,7 @@ namespace Thuchanh
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgvCTXuat;
         private System.Windows.Forms.DataGridView dgvHDXuat;
+        private System.Windows.Forms.Button btnLoad;
+        private System.Windows.Forms.Button btnTrangchu;
     }
 }
